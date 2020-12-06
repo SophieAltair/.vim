@@ -47,6 +47,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Movement {{{
 nnoremap j gj
 nnoremap k gk
+nnoremap gV `[v`]
 " }}}
 " Folding {{{
 set foldmethod=indent   " fold based on indent level
@@ -54,9 +55,6 @@ set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold field by default on open
 nnoremap <space> za
 set foldlevelstart=10   " start with fold level of 1
-" }}}
-" Movement {{{
-nnoremap gV `[v`]
 " }}}
 " Leader Shortcuts {{{
 map , <Leader>
