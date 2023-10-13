@@ -11,7 +11,7 @@ if uname == 'Linux'
                 colorscheme codedark
 
         elseif lines[0] =~ "microsoft"
-                " WLS 2
+                " WSL 2
                 colorscheme codedark
         else
                 " LINUX
