@@ -2,19 +2,22 @@
 syntax enable
 set background=dark
 
-" OS Compat
-let uname = substitute(system('uname'),'\n','','')
+set termguicolors
+colorscheme sorbet
 
-" Linux
-if uname == 'Linux'
-    set termguicolors 
-    colorscheme solarized8
-
-" Mac
-elseif uname == 'Darwin'
-    colorscheme solarized8
-
-endif
+"" OS Compat - currently deprecated but might reuse
+"let uname = substitute(system('uname'),'\n','','')
+"
+"" Linux
+"if uname == 'Linux'
+"    set termguicolors 
+"    colorscheme solarized8
+"
+"" Mac
+"elseif uname == 'Darwin'
+"    colorscheme solarized8
+"
+"endif
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
