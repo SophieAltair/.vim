@@ -98,8 +98,8 @@ let s:cdDiffRedLightLight = {'gui': '#FB0101', 'cterm': s:cterm08, 'cterm256': '
 let s:cdDiffGreenDark = {'gui': '#373D29', 'cterm': s:cterm0B, 'cterm256': '237'}
 let s:cdDiffGreenLight = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'}
 
-let s:cdSearchCurrent = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'} 
-let s:cdSearch = {'gui': '#264F78', 'cterm': s:cterm03, 'cterm256': '24'}
+let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '236'}
+let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '236'}
 
 " Syntax colors:
 
@@ -113,7 +113,7 @@ let s:cdBlue = {'gui': '#569CD6', 'cterm': s:cterm0D, 'cterm256': '75'}
 let s:cdDarkBlue = {'gui': '#223E55', 'cterm': s:cterm0D, 'cterm256': '73'}
 let s:cdLightBlue = {'gui': '#9CDCFE', 'cterm': s:cterm0C, 'cterm256': '117'}
 if g:codedark_conservative | let s:cdLightBlue = s:cdFront | endif
-let s:cdGreen = {'gui': '#6A9955', 'cterm': s:cterm0B, 'cterm256': '65'}
+let s:cdGreen = {'gui': '#608B4E', 'cterm': s:cterm0B, 'cterm256': '65'}
 let s:cdBlueGreen = {'gui': '#4EC9B0', 'cterm': s:cterm0F, 'cterm256': '43'}
 let s:cdLightGreen = {'gui': '#B5CEA8', 'cterm': s:cterm09, 'cterm256': '151'}
 let s:cdRed = {'gui': '#F44747', 'cterm': s:cterm08, 'cterm256': '203'}
@@ -158,6 +158,9 @@ call <sid>hi('PmenuThumb', {}, s:cdPopupFront, 'none', {})
 call <sid>hi('Question', s:cdBlue, s:cdBack, 'none', {})
 call <sid>hi('Search', s:cdNone, s:cdSearch, 'none', {})
 call <sid>hi('SpecialKey', s:cdBlue, s:cdNone, 'none', {})
+call <sid>hi('SpellBad', s:cdNone, s:cdNone, 'undercurl', {})
+call <sid>hi('SpellCap', s:cdNone, s:cdNone, 'undercurl', {})
+call <sid>hi('SpellLocal', s:cdNone, s:cdNone, 'undercurl', {})
 call <sid>hi('StatusLine', s:cdFront, s:cdLeftMid, 'none', {})
 call <sid>hi('StatusLineNC', s:cdFront, s:cdLeftDark, 'none', {})
 call <sid>hi('TabLine', s:cdFront, s:cdTabOther, 'none', {})
@@ -200,7 +203,7 @@ call <sid>hi('StorageClass', s:cdBlue, {}, 'none', {})
 call <sid>hi('Structure', s:cdBlue, {}, 'none', {})
 call <sid>hi('Typedef', s:cdBlue, {}, 'none', {})
 
-call <sid>hi('Special', s:cdYellowOrange, {}, 'none', {})
+call <sid>hi('Special', s:cdFront, {}, 'none', {})
 call <sid>hi('SpecialChar', s:cdFront, {}, 'none', {})
 call <sid>hi('Tag', s:cdFront, {}, 'none', {})
 call <sid>hi('Delimiter', s:cdFront, {}, 'none', {})
@@ -450,6 +453,10 @@ call <sid>hi('luaFuncKeyword', s:cdPink, {}, 'none', {})
 call <sid>hi('luaLocal', s:cdPink, {}, 'none', {})
 call <sid>hi('luaBuiltIn', s:cdBlue, {}, 'none', {})
 
+" YAML:
+call <sid>hi('yamlKey', s:cdBlue, {}, 'none', {})
+call <sid>hi('yamlConstant', s:cdBlue, {}, 'none', {})
+
 " SH:
 call <sid>hi('shDeref', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('shVariable', s:cdLightBlue, {}, 'none', {})
@@ -458,8 +465,3 @@ call <sid>hi('shVariable', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('sqlKeyword', s:cdPink, {}, 'none', {})
 call <sid>hi('sqlFunction', s:cdYellowOrange, {}, 'none', {})
 call <sid>hi('sqlOperator', s:cdPink, {}, 'none', {})
-
-" YAML:
-call <sid>hi('yamlKey', s:cdBlue, {}, 'none', {})
-call <sid>hi('yamlConstant', s:cdBlue, {}, 'none', {})
-
