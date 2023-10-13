@@ -59,5 +59,8 @@ set foldlevelstart=10   " start with fold level of 1
 " Leader Shortcuts {{{
 map , <Leader>
 " }}}
-
+" Spell Check {{{
+set spelllang=en
+set spellfile=$HOME/.vim/spell/en.utf-8.add
+"}}}
 " vim:foldmethod=marker:foldlevel=0
