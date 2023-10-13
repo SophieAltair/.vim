@@ -63,4 +63,7 @@ map , <Leader>
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 "}}}
+" Function Keys {{{
+map <F1> :colorscheme codedark<CR>
+"}}}
 " vim:foldmethod=marker:foldlevel=0
