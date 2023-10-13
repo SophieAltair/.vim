@@ -1,7 +1,21 @@
 " Colors {{{
 syntax enable
 set background=dark
-colorscheme solarized
+
+" WSL Compatibility Nonsense
+let uname = substitute(system('uname'),'\n','','')
+if uname == 'Linux'
+        let lines = readfile("/proc/version")
+        if lines[0] =~ "Microsoft"
+                " WINDOWS
+                colorscheme codedark
+
+        else
+                " LINUX
+                colorscheme solarized
+
+        endif
+endif
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
