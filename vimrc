@@ -22,6 +22,7 @@ set tabstop=4           " 4 space tab
 set expandtab           " use spaces for tabs
 set softtabstop=4       " 4 space tab
 set modelines=1
+set shiftwidth=4
 " }}}
 " UI {{{
 set number
@@ -29,6 +30,9 @@ set cursorline
 filetype indent on
 set wildmenu
 set lazyredraw
+set breakindent
+set breakindentopt=shift:2,min:40,sbr
+set showbreak=>>
 " }}}
 " Searching {{{
 set incsearch
@@ -50,7 +54,7 @@ set foldlevelstart=10   " start with fold level of 1
 nnoremap gV `[v`]
 " }}}
 " Leader Shortcuts {{{
-let mapleader=","
+map , <Leader>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
