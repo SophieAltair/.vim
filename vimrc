@@ -10,6 +10,9 @@ if uname == 'Linux'
                 " WINDOWS
                 colorscheme codedark
 
+        elseif lines[0] =~ "microsoft"
+                " WLS 2
+                colorscheme codedark
         else
                 " LINUX
                 colorscheme solarized
