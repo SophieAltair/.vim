@@ -8,11 +8,13 @@ if uname == 'Linux'
         let lines = readfile("/proc/version")
         if lines[0] =~ "Microsoft"
                 " WINDOWS
-                colorscheme codedark
+                set termguicolors 
+                colorscheme solarized8
 
         elseif lines[0] =~ "microsoft"
                 " WSL 2
-                colorscheme codedark
+                set termguicolors
+                colorscheme solarized8
         else
                 " LINUX
                 colorscheme solarized
