@@ -2,7 +2,7 @@
 syntax enable
 set background=dark
 
-" WSL Compatibility Nonsense
+" OS Compat
 let uname = substitute(system('uname'),'\n','','')
 if uname == 'Linux'
         let lines = readfile("/proc/version")
@@ -15,11 +15,17 @@ if uname == 'Linux'
                 " WSL 2
                 set termguicolors
                 colorscheme solarized8
+
         else
                 " LINUX
                 colorscheme solarized
 
         endif
+
+    " Mac
+elseif uname == 'Darwin'
+    colorscheme solarized8
+
 endif
 " }}}
 " Spaces & Tabs {{{
