@@ -4,25 +4,13 @@ set background=dark
 
 " OS Compat
 let uname = substitute(system('uname'),'\n','','')
+
+" Linux
 if uname == 'Linux'
-        let lines = readfile("/proc/version")
-        if lines[0] =~ "Microsoft"
-                " WINDOWS
-                set termguicolors 
-                colorscheme solarized8
+    set termguicolors 
+    colorscheme solarized8
 
-        elseif lines[0] =~ "microsoft"
-                " WSL 2
-                set termguicolors
-                colorscheme solarized8
-
-        else
-                " LINUX
-                colorscheme solarized
-
-        endif
-
-    " Mac
+" Mac
 elseif uname == 'Darwin'
     colorscheme solarized8
 
