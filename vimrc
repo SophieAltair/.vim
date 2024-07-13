@@ -36,7 +36,7 @@ set breakindent
 set breakindentopt=shift:2,min:40,sbr
 set showbreak=>>
 if exists('+colorcolumn') "ColorColumn"
-      set colorcolumn=80
+      set colorcolumn=125
   else
         au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
