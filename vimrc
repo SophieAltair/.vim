@@ -71,4 +71,10 @@ map <F2> :colorscheme solarized8<CR>
 map <F4> :colorscheme sorbet<CR>
 map <F12> :set termguicolors<CR> 
 "}}}
+" YAML Fixes {{{
+augroup yaml_fix
+    autocmd!
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
+augroup END
+"}}}
 " vim:foldmethod=marker:foldlevel=0
