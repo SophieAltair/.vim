@@ -77,4 +77,11 @@ augroup yaml_fix
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 augroup END
 "}}}
+" Plugins {{{
+call plug#begin()
+
+Plug 'tidalcycles/vim-tidal'
+
+call plug#end()
+"}}}
 " vim:foldmethod=marker:foldlevel=0
