@@ -77,6 +77,13 @@ augroup yaml_fix
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 augroup END
 "}}}
+" Typescript Fixes {{{
+" augroup ts_fix
+"     autocmd!
+"     autocmd FileType typescript setlocal re=0
+" augroup END
+set re=0
+"}}}
 " vim-tidal {{{
 
 let g:tidal_target = "terminal"

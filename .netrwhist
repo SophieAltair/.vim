@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/saltair/.config/yabai'
+let g:netrw_dirhist_7='/Users/saltair/.config/skhd'
+let g:netrw_dirhist_6='/Users/saltair/.config/yabai'
+let g:netrw_dirhist_5='/Users/saltair/stash/gie-carnival-capers-push-backend/build'
+let g:netrw_dirhist_4='/Users/saltair/MacGhosthub/access-cats'
+let g:netrw_dirhist_3='/Users/saltair/MacGhosthub'
+let g:netrw_dirhist_2='/Users/saltair/MacGhosthub/saltair-pecha-kucha'
 let g:netrw_dirhist_1='/Users/skoddie/.vim/after/syntax'
