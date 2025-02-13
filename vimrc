@@ -41,6 +41,9 @@ if exists('+colorcolumn') "ColorColumn"
         au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 " }}}
+" Mouse (God Save Us) {{{
+set mouse=a
+" }}}
 " Searching {{{
 set incsearch
 set hlsearch
@@ -65,12 +68,26 @@ map , <Leader>
 set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 "}}}
-" function Keys {{{
+" Function Keys {{{
 map <F1> :colorscheme codedark<CR>
 map <F2> :colorscheme solarized8<CR>
 map <F4> :colorscheme sorbet<CR>
 map <F12> :set termguicolors<CR> 
 "}}}
+" netrw {{{
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 0
+let g:netrw_winsize = 25
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+" close if final buffer is netrw or the quickfix
+nmap - :Vexplore<cr>
+augroup finalcountdown
+ au!
+ autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+augroup END
+" }}}
 " YAML Fixes {{{
 augroup yaml_fix
     autocmd!
