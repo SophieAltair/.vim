@@ -44,6 +44,9 @@ endif
 " Mouse (God Save Us) {{{
 set mouse=a
 " }}}
+" System Clipboard {{{
+vnoremap <C-y> :w !pbcopy<CR><CR>
+" }}}
 " Searching {{{
 set incsearch
 set hlsearch
