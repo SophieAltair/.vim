@@ -72,8 +72,9 @@ set spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
 "}}}
 " Function Keys {{{
-map <F1> :colorscheme codedark<CR>
-map <F2> :colorscheme solarized8<CR>
+map <F1> :hi Normal guibg=NONE ctermbg=NONE<CR>
+map <F2> :colorscheme codedark<CR>
+map <F3> :colorscheme solarized8<CR>
 map <F4> :colorscheme sorbet<CR>
 map <F12> :set termguicolors<CR> 
 "}}}
