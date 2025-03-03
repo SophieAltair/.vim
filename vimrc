@@ -44,6 +44,9 @@ endif
 " Mouse (God Save Us) {{{
 set mouse=a
 " }}}
+" Syntax Highlighting {{{
+let g:is_posix = 1
+" }}}
 " System Clipboard {{{
 vnoremap <C-y> :w !pbcopy<CR><CR>
 " }}}
