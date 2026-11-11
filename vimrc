@@ -35,6 +35,16 @@ set lazyredraw
 set breakindent
 set breakindentopt=shift:2,min:40,sbr
 set showbreak=>>
+" Per-project settings from .editorconfig (bundled plugin). Where a project sets
+" max_line_length, the colour column and textwidth follow it instead of the default below.
+packadd! editorconfig
+" The plugin would ADD a second marker beside the default one. Move the marker instead:
+" wherever something sets a textwidth, the colour column sits just past it.
+let g:EditorConfig_max_line_indicator = 'none'
+augroup marker_follows_textwidth
+  autocmd!
+  autocmd BufWinEnter * if &l:textwidth > 0 | setlocal colorcolumn=+1 | endif
+augroup END
 if exists('+colorcolumn') "ColorColumn"
       set colorcolumn=125
   else
